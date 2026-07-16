@@ -1,0 +1,12 @@
+{:itonami.blueprint/id "cloud-itonami-isic-5310"
+ :itonami.blueprint/name "Postal Activities"
+ :itonami.blueprint/isic-rev5 "5310"
+ :itonami.blueprint/domain :logistics/postal-services
+ :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:universal-service :privacy :transparency]
+ :itonami.blueprint/governor :postal-ops-governor
+ :itonami.blueprint/robotics true
+ :itonami.blueprint/required-technologies [:robotics :identity :forms :dmn :bpmn :audit-ledger :logistics]
+ :itonami.blueprint/optional-technologies []
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/maturity :implemented}
