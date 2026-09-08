@@ -1,6 +1,6 @@
 (ns postalops.advisor-test
   "Unit tests of `postalops.advisor` proposal generation."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [postalops.advisor :as adv]
             [postalops.store :as store]))
@@ -68,7 +68,7 @@
   (testing "the default :flag-security-concern rationale/summary text never itself uses content-inspection/interception/refusal-finalization vocabulary -- it is an exterior observation only, never a content determination"
     (let [p (adv/infer db {:op :flag-security-concern :facility-id "facility-1"
                            :patch {:concern "unusual weight and a faint leaking substance"}})
-          blob (str/lower-case (str (:summary p) " " (:rationale p)))]
+          blob (str/lower (str (:summary p) " " (:rationale p)))]
       (doseq [forbidden ["inspect" "intercept" "傍受" "開封" "内容"]]
         (is (not (str/includes? blob forbidden))
             (str "default flag-security-concern text must not use " (pr-str forbidden)))))))
