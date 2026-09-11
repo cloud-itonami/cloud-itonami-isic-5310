@@ -16,7 +16,7 @@
   runs before shipping).
 
   Cross-checked against this repo's own `postalops.sim` demo driver
-  (`clojure -M:dev:run`) BEFORE writing this scenario: `postalops.sim`
+  (`kbb -M:dev:run`) BEFORE writing this scenario: `postalops.sim`
   already drives real seeded ids correctly (facility-1/2/3/4, vendor-1/2,
   the nonexistent facility-99) with dispositions matching governor.cljc's
   own rules exactly -- unlike `cloud-itonami-isic-851`'s `schoolops.sim`
@@ -27,7 +27,7 @@
   either way -- every field read by `render` below is real governor/
   store output, not a hand-typed copy.
 
-  Usage: `clojure -M:dev:render-html [out-file]`
+  Usage: `kbb -M:dev:render-html [out-file]`
   (default `docs/samples/operator-console.html`)."
   (:require [jp-go-dds.skin]
             [kotoba.lang.text :as str]
@@ -187,7 +187,7 @@
      "<main>\n"
      "  <section class=\"card\">\n"
      "    <h2>Sorting facilities &amp; delivery-route carriers</h2>\n"
-     "    <p class=\"muted\">Demo snapshot — build-time-generated from <code>postalops.store</code> via <code>postalops.render-html</code> (<code>clojure -M:dev:render-html</code>), regenerated nightly.</p>\n"
+     "    <p class=\"muted\">Demo snapshot — build-time-generated from <code>postalops.store</code> via <code>postalops.render-html</code> (<code>kbb -M:dev:render-html</code>), regenerated nightly.</p>\n"
      "    <table>\n"
      "      <thead><tr><th>Facility</th><th>Name</th><th>Registration status</th><th>Last coordination status</th></tr></thead>\n"
      "      <tbody>\n"
