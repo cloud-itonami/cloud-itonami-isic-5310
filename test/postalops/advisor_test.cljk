@@ -1,7 +1,7 @@
 (ns postalops.advisor-test
   "Unit tests of `postalops.advisor` proposal generation."
   (:require [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [postalops.advisor :as adv]
             [postalops.store :as store]))
 
